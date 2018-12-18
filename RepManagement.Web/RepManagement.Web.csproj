@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\dist\**" />
+    <Content Remove="wwwroot\dist\**" />
+    <EmbeddedResource Remove="wwwroot\dist\**" />
+    <None Remove="wwwroot\dist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\%2a%2a" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\static\css\app.33bc6a0b2bb98414ff87cb8a86b6fe74.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\static\css\app.33bc6a0b2bb98414ff87cb8a86b6fe74.css.map" />
+    <Content Include="wwwroot\static\fonts\element-icons.b02bdc1.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\static\img\header-icons.38b5974.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\static\img\icons.38087f7.png" />
+    <Content Include="wwwroot\static\img\loging-header-icons.c229c94.png" />
+    <Content Include="wwwroot\static\img\mid.f67b246.jpg" />
+    <Content Include="wwwroot\static\img\sys-logo.b269a2b.png" />
+    <Content Include="wwwroot\static\img\sys-menulogo.8c05336.png" />
+    <Content Include="wwwroot\static\js\0.67f0478381f7ba9bff99.js" />
+    <Content Include="wwwroot\static\js\0.67f0478381f7ba9bff99.js.map" />
+    <Content Include="wwwroot\static\js\1.1ddade4490e6b9460ea9.js" />
+    <Content Include="wwwroot\static\js\1.1ddade4490e6b9460ea9.js.map" />
+    <Content Include="wwwroot\static\js\10.0410cad51f7179c82a18.js" />
+    <Content Include="wwwroot\static\js\10.0410cad51f7179c82a18.js.map" />
+    <Content Include="wwwroot\static\js\11.e1a86852cc0dc7fa9077.js" />
+    <Content Include="wwwroot\static\js\11.e1a86852cc0dc7fa9077.js.map" />
+    <Content Include="wwwroot\static\js\2.511e55764959b8073e5c.js" />
+    <Content Include="wwwroot\static\js\2.511e55764959b8073e5c.js.map" />
+    <Content Include="wwwroot\static\js\3.bd04cc6e7bc69f345c72.js" />
+    <Content Include="wwwroot\static\js\3.bd04cc6e7bc69f345c72.js.map" />
+    <Content Include="wwwroot\static\js\4.fc41b76a83e6d7af1b59.js" />
+    <Content Include="wwwroot\static\js\4.fc41b76a83e6d7af1b59.js.map" />
+    <Content Include="wwwroot\static\js\5.579c5eea969472a065d6.js" />
+    <Content Include="wwwroot\static\js\5.579c5eea969472a065d6.js.map" />
+    <Content Include="wwwroot\static\js\6.27958a5e9b7bdba33586.js" />
+    <Content Include="wwwroot\static\js\6.27958a5e9b7bdba33586.js.map" />
+    <Content Include="wwwroot\static\js\7.1c17cb6aedc36eaadb36.js" />
+    <Content Include="wwwroot\static\js\7.1c17cb6aedc36eaadb36.js.map" />
+    <Content Include="wwwroot\static\js\8.ff166b6580531609c623.js" />
+    <Content Include="wwwroot\static\js\8.ff166b6580531609c623.js.map" />
+    <Content Include="wwwroot\static\js\9.6d16bd502d9840c4013a.js" />
+    <Content Include="wwwroot\static\js\9.6d16bd502d9840c4013a.js.map" />
+    <Content Include="wwwroot\static\js\app.87c06b76584f0abab0b1.js" />
+    <Content Include="wwwroot\static\js\app.87c06b76584f0abab0b1.js.map" />
+    <Content Include="wwwroot\static\js\manifest.04c6a57c384c82dfac0e.js" />
+    <Content Include="wwwroot\static\js\manifest.04c6a57c384c82dfac0e.js.map" />
+    <Content Include="wwwroot\static\js\vendor.cbaecd608e76b1c2a321.js" />
+    <Content Include="wwwroot\static\js\vendor.cbaecd608e76b1c2a321.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.HttpOverrides" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RepManagement.Common\RepManagement.Common.csproj" />
+    <ProjectReference Include="..\RepManagement.Models\RepManagement.Models.csproj" />
+  </ItemGroup>
+
+</Project>

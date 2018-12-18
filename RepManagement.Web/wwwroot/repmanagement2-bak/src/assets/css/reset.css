@@ -1,0 +1,564 @@
+/*
+* @Author: Marte
+* @Date:   2017-07-13 16:12:41
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-13 16:15:09
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input::-ms-clear{display:none;} /*清除ie input后面的叉叉*/
+input:focus, textarea:focus, select:focus {
+    outline-offset: 0;
+}
+:focus {
+    outline: none;
+}
+html,body{
+    height: 100%;
+}
+#app{
+    min-height: 100%;
+    padding-bottom: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.inquire{
+    margin-top:10px;
+}
+
+/* 通用-颜色 */
+
+/*重置藍色為綠色  */
+.el-button--primary{
+    background: #49c9c4!important;
+    border-color:#49c9c4!important;
+}
+.el-button:focus, .el-button:hover{
+    border-color: #49c9c4!important;
+    color: #49c9c4!important;
+}
+.el-button--primary:focus, .el-button--primary:hover{
+    background: #49c9c4!important;
+    border-color:#49c9c4!important;
+    color: #fff!important;
+}
+
+.must-star{
+    color: red!important;
+}
+.green{
+    color: #49c9c4!important;
+}
+.orange,.green:hover,.green.J-change{
+    color: #fc703e!important;
+}
+.btn-disabled.el-button--primary{
+    color: #bcbec2!important;
+    background-color: #f4f4f5!important;
+    border-color: #e9e9eb!important;
+}
+.btn-gray.el-button--primary,.btn-gray1.el-button--primary,.btn-gray.el-button--primary:focus{
+    background: #f2f2f2!important;
+    border-color: #e6e6e6!important;
+    color: #666666!important;
+}
+.btn-green.el-button--primary,.btn-green.el-button--primary:focus{
+    background-color: #49c9c4!important;
+    border-color: #49c9c4!important;
+    color: #fff!important;
+}
+
+.el-button .el-icon-plus,.el-button .el-icon-check{
+    color: #fff!important;
+}
+
+.btn-orange.el-button--primary,.btn-orange.el-button--primary:active,.btn-orange.el-button--primary:focus{
+    background: #fc703e!important;
+    border-color: #fc703e!important;
+}
+.btn-orange.el-button--primary:hover,.btn-gray1.el-button--primary:hover{
+    background: #ff5b20!important;
+    border-color: #ff5b20!important;
+}
+.btn-green.el-button--primary:hover,.btn-gray.el-button--primary:hover,.btn-gray.el-button--primary:visited{
+    background-color: #2db2ad!important;
+    border-color: #2db2ad!important;
+    color: #fff!important;
+}
+.orange.el-select .el-input__inner:focus{
+    border-color: #fc703e!important;
+}
+.orange .el-textarea__inner:focus{
+    border-color: #fc703e!important;
+}
+.orange .el-input__inner:focus{
+    border-color: #fc703e!important;
+}
+.green .el-pager li.active{
+    background-color: #49c9c4!important;
+    border-color: #49c9c4!important;
+}
+.green .el-pager li.active:hover{
+    color: #fff!important;
+}
+.green .el-pager li:hover,.green .el-pagination button:hover{
+    color: #49c9c4!important;
+}
+.green .el-pagination__editor:focus{
+    border-color: #49c9c4!important;
+}
+.orange .el-input__inner,.orange .el-textarea__inner{
+    color: #666!important;
+}
+.el-scrollbar__view.el-select-dropdown__list .el-select-dropdown__item.hover,.el-scrollbar__view.el-select-dropdown__list .el-select-dropdown__item:hover{
+    background-color: #f2f2f2!important;
+}
+.el-select-dropdown__list .el-select-dropdown__item.selected,.el-scrollbar__view.el-select-dropdown__list .el-select-dropdown__item.selected.hover{
+    color: #fff!important;
+    background-color: #49c9c4!important;
+}
+.el-picker-panel__content .el-date-table td.current:not(.disabled),.el-picker-panel__content  .el-date-table td.end-date,.el-picker-panel__content  .el-date-table td.start-date {
+    background-color: #49c9c4!important;
+    color: #fff!important;
+}
+.el-picker-panel__content .el-date-table td.today:before{
+    border-top-color: #49c9c4!important;
+}
+
+.el-select-dropdown.is-multiple .el-scrollbar .el-select-dropdown__item.selected{
+    color: #fff;
+    background-color: #49c9c4!important;
+}
+.el-select__tags .el-tag--primary{
+    color: #49c9c4!important;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner{
+    background-color: #49c9c4!important;
+    border-color: #49c9c4!important;
+}
+.el-checkbox__inner:hover{
+    border-color: #49c9c4!important;
+}
+
+.el-loading-spinner .path{
+    stroke: #49c9c4!important;
+}
+.el-loading-spinner .el-loading-text{
+    color: #49c9c4!important;
+}
+.el-tabs__item.is-active{
+    color: #49c9c4!important;
+}
+.el-tabs__active-bar{
+    background-color: #49c9c4!important;
+}
+.el-dialog__headerbtn:hover .el-dialog__close{
+    color: #49c9c4!important;
+}
+
+/* 通用-距离 */
+.mt20{
+    margin-top: 20px;
+}
+.justify-lb{
+    float: left;
+    width: 4em;
+    height: 1.5em; 
+    text-align: justify;
+}
+.justify-lb:after{
+    content:'.';
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    height: 0;
+}
+/* 通用-icon */
+
+.icons{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url('../../assets/icons.png') 0 0 no-repeat;
+}
+.icons.i-leading-in,.icons.i-leading-out{
+    width: 16px;
+    height: 16px;
+}
+.icons.i-leading-out{
+    background-position: 0 -20px;
+}
+.icons.i-more{
+    width: 10px;
+    height: 17px;
+    background-position: 0 -42px;
+}
+.icons.i-resume-leadin{
+    width: 18px;
+    height: 18px;
+    background-position: -22px -2px;
+}
+.resume-icons{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 25px;
+    height: 25px;
+    background: url('../../assets/resume-icons.png') 0 0 no-repeat;
+}
+.resume-icons.i-basemsg{
+    /* width: 16px;
+    height: 19px; */
+    background-position: -6px 0px;
+}
+.resume-icons.i-majors{
+    /* width: 20px;
+    height: 20px; */
+    background-position: -33px 0px;
+}
+.resume-icons.i-comments{
+    /* width: 22px;
+    height: 20px; */
+    background-position: -65px 0px;
+}
+.resume-icons.i-wishes{
+    /* width: 23px;
+    height: 20px; */
+    background-position: 0px -29px;
+}
+.resume-icons.i-work-exp{
+    /* width: 20px;
+    height: 20px; */
+    background-position: -33px -28px;
+}
+.resume-icons.i-project-exp{
+    /* width: 21px;
+    height: 21px; */
+    background-position: -65px -28px;
+}
+.resume-icons.i-education{
+    /* width: 20px;
+    height: 20px; */
+    background-position: -3px -61px;
+}
+.resume-icons.i-language{
+    /* width: 21px;
+    height: 21px; */
+    background-position: -33px -61px;
+}
+.resume-icons.i-othermsg{
+    /* width: 18px;
+    height: 23px; */
+    background-position: -68px -60px;
+}
+
+/* 通用--高度 */
+.el-button--primary.fix-h40 .i-leading-in,.el-button--primary.fix-h40 .i-leading-out,.el-button--primary.fix-h40 .i-resume-leadin{
+    padding-right: 5px;
+    vertical-align: -3px;
+}
+.el-button--primary.fix-h30{
+    height: 30px;
+    font-size: 14px;
+}
+.el-button--primary.fix-h40{
+    height: 40px;
+    vertical-align: top;
+}
+/* 通用--宽度 --高度*/
+.el-dialog.el-dialog--small{
+    min-width: 680px!important;
+}
+.w220.el-select{
+    width: 220px;
+}
+.w220.el-date-editor.el-input{
+    width: 220px;
+}
+.w220.el-input .el-input__inner{
+    width: 220px;
+}
+.w250.el-select{
+    width: 250px;
+}
+.w250.el-date-editor.el-input{
+    width: 250px;
+}
+.w250.el-input .el-input__inner{
+    width: 250px;
+}
+.h30.el-input .el-input__inner{
+    height: 30px;
+}
+.h30.el-select .el-input__inner{
+    height: 30px;
+}
+.el-submenu .el-menu-item{
+    min-width: 0px!important;
+}
+/* 页面 -- 新增需求 */
+.admin-content{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.filter_table{
+    max-width: 1200px;
+    min-width: 640px;
+    width: 100%;
+    background: #f8f8f8;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #666666;
+    border-collapse:collapse;
+}
+.filter_table td{
+    text-align: left;
+}
+.filter_table .ft_td{
+    text-align: center;
+    padding-right: 120px;
+}
+.filter_table .hd,.filter_table .ft{
+    height: 50px;
+}
+.filter_table .hd{
+    border-bottom: 1px solid #e6e6e6;
+}
+.filter_table .ct{
+    height: 40px;
+        border-bottom: 1px dashed #e6e6e6; 
+}
+.filter_table .hd{
+    background: #f2f2f2;
+}
+.filter_table .name{
+    width: 100px;
+    padding-left: 20px;
+}
+.filter_table .hd-name{
+    font-size: 16px;
+    color: #fc703e;
+}
+.filter_table .btnwp_td{
+    width: 160px;
+    font-size: 0;
+    padding-right: 10px;
+    text-align: right;
+}
+.filter_table .el-checkbox-button__inner{
+    color: #666;
+}
+.filter_table .tb-tr:last-child{
+    border: none;
+}
+.ct-btnwp_div{
+    font-size: 0;
+    line-height: 0;
+    text-align: left;
+    max-width: 1200px;
+    min-width: 640px;
+    width: 100%;
+    margin: 30px auto 0 auto;
+}
+.pagination{
+    margin-top: 20px;
+}
+
+
+.data-table{
+    max-width: 1200px;
+    min-width: 640px;
+    width: 100%;
+    margin: 10px auto 0 auto;
+}
+
+.admin-content .el-input__inner,.admin-content .el-input__inner:focus{
+    height: 30px;
+    border-color: #e6e6e6;
+    color: #666;
+}
+.admin-content .el-select .el-input__inner:focus{
+    border-color: #e6e6e6;
+}
+
+.Com-Checkbox1 .el-checkbox-button__inner{
+  border: none;
+  background: transparent;
+  padding: 8px 10px;
+  margin-right: 5px;
+}
+.Com-Checkbox1 .el-checkbox-button.is-checked .el-checkbox-button__inner{
+  color: #fc703e;
+  border: none;
+  background: #ddd;
+  box-shadow: none;
+  border-radius: 5px;
+}
+.Com-Checkbox1 .el-checkbox-button__inner:hover{
+  color: #49c9c4;
+}
+.Com-Checkbox1 .el-checkbox-button:first-child .el-checkbox-button__inner{
+  border-left: none;
+}
+.Com-table1.el-table th{
+    text-align: center;
+    background: #f2f2f2;
+}
+.Com-table1 .slash{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 8px;
+    height: 15px;
+    border-right: 1px dashed #ddd;
+    margin-right: 8px;
+    /*vertical-align: middle;*/
+}
+.Com-table1 i,.el-table__row i{
+    cursor: pointer;
+}
+.add-submitwp{
+    margin-top: 70px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 30px;
+    position: relative;
+}
+.add-submitwp .tips{
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    left: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color:  #fc703e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 页面 -- 中部 */
+.whole-center{
+    max-width: 1200px;
+    width: 100%;
+    min-width: 640px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.whole-center-title{
+    font-size: 16px;
+    color: #48c9c4;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+    padding-top: 20px;
+    position: relative;
+}
+.whole-center-title .resume-icons{
+    margin-top: 9px;
+    margin-right: 2px;
+    vertical-align: top;
+}
+.whole-center-title .btn-right{
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+/* 页面--搜索框 */
+.search-wp{
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 640px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.search-input{
+    width: 385px;
+    height: 32px;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+:-moz-placeholder{
+    color: #e6e6e6;
+}
+:-ms-input-placeholder{
+    color: #e6e6e6;
+}
+::-webkit-input-placeholder{
+    color: #e6e6e6;
+}
+
+/*组件--树状组织  */
+.need-tree-wp-div{
+    position: relative; 
+}  
+.need-tree-wp-div.w220{
+    width: 220px;
+}
+
+.need-tree{
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 99%;
+    z-index: 100;
+    /* display: none; */
+}
+.need-tree-wp-div .needadd-ts1{
+    width: 100%;   
+    
+}
+/*增添删除icon 在hover时候显示  */
+.closeiconwp .el-icon-circle-close{
+    visibility: hidden;
+}
+.closeiconwp:hover .el-icon-circle-close{
+    visibility: visible;
+}
+/* 部门树形结构的箭头点击区域  */
+.arrow-tree .el-tree-node__content>.el-tree-node__expand-icon{
+    margin-right: 0;
+}
+.arrow-tree .el-tree-node__expand-icon{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 8px;
+    border: none;
+    width: 8px;
+    height: 26px;
+    position: relative;
+}
+.arrow-tree .el-tree-node__expand-icon:before{
+    content: '';
+    display: inline-block;
+    border: 6px solid transparent;
+    border-right-width: 0;
+    border-left-color: #97a8be;
+    border-left-width: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.arrow-tree .el-tree-node__expand-icon.is-leaf{
+    visibility: hidden;
+}
+.arrow-tree .el-tree-node__expand-icon.is-leaf:before{
+    border-color: transparent;
+}
+
